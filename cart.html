@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ###################################################################### navbar -->
+    <div class="navbar">
+        <div class="navbar-content">
+            <img class="navbar-content__logo" src="./images/logo.png" alt="">
+            <div class="spacer"></div>
+            <div class="toggleable" id="topNav">
+                <a id="topnav__a" href="./home.html">Home</a>
+                <a id="topnav__a" href="./home.html">Product</a>
+                <a id="topnav__a" href="./detail.html">Detail</a>
+                <a id="topnav__a" href="./cart.html">Cart</a>
+                <a id="topnav__a" href="./account.html">Account</a>
+            </div>
+            <img class="cart-item" src="./images/cart.png" alt="" onclick="openSidebar()">
+            <a href="#" class="navbar-content__toggler" onclick="clickTopNav(event)">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="sidebar" class="cart" style="width:0">
+            <div class="row-1 ">
+                <p>Your shopping cart</p>
+                <i class="fas fa-times-circle cart__button--close" onclick="closeSidebar()" style="margin: auto 0;"></i>
+            </div>
+            <div class="cart__product row">
+                <div  class="col-3">
+                    <img src="./images/buy-1.jpg" alt="">
+                </div>
+                <div class="cart__product__info">
+                    <h4 class="mz">Corgi HRL0907003 Water Tracker Bottle</h4>
+                    <p class="mz">$19.5</p>
+                    <p class="mz">32oz</p>
+                    <p class="mz" style="color: red;">Remove</p>
+                </div>
+            </div>
+            <div class="cart__product row">
+                <div  class="col-3">
+                    <img src="./images/buy-2.jpg" alt="">
+                </div>
+                <div class="cart__product__info">
+                    <h4 class="mz">Corgi HRL0907003 Water Tracker Bottle</h4>
+                    <p class="mz">$19.5</p>
+                    <p class="mz">32oz</p>
+                    <p class="mz" style="color: red;">Remove</p>
+                </div>
+            </div>
+            <div class="cart__product row">
+                <div  class="col-3">
+                    <img src="./images/buy-3.jpg" alt="">
+                </div>
+                <div class="cart__product__info">
+                    <h4 class="mz">Corgi HRL0907003 Water Tracker Bottle</h4>
+                    <p class="mz">$19.5</p>
+                    <p class="mz">32oz</p>
+                    <p class="mz" style="color: red;">Remove</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ###################################################################### cart -->
+    <div style="padding: 50px 80px;">
+        <table class="cart-table">
+            <tbody style="width:100%">
+                <tr class="cart-table__head">
+                    <th class="text-left col-2">
+                        Product
+                    </th>
+                    <th  class="text-center col-4">Quantity
+        
+                    </th>
+                    <th  class="text-right col-4">
+                        Subtotal
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-table__info">
+                            <img class="img" src="images/buy-1.jpg" alt="" srcset="">
+                            <div>
+                                <p><strong>Red Printed Tshirt</strong></p>
+                                <p>Price:$50</p>
+                                <p style="color: red;">Remove</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center" ><input class="cart-table__info__input" type="number" value="1"></td>
+                    <td class="text-right">$50.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-table__info">
+                            <img class="img" src="images/buy-2.jpg" alt="" srcset="">
+                            <div>
+                                <p><strong>Red Printed Tshirt</strong></p>
+                                <p>Price:$50</p>
+                                <p style="color: red;">Remove</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center"><input class="cart-table__info__input" type="number" value="2"></td>
+                    <td class="text-right">$50.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-table__info">
+                            <img class="img" src="images/buy-3.jpg" alt="" srcset="">
+                            <div>
+                                <p><strong>Red Printed Tshirt</strong></p>
+                                <p>Price:$100</p>
+                                <p style="color: red;">Remove</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center"><input class="cart-table__info__input" type="number" value="1"></td>
+                    <td class="text-right">$50.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-price">
+            <table>
+                <tbody>
+                    <tr class="row">
+                        <th class="col-2">Subtotal</th>
+                        <th class="col-2">$200.00</th>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-2">Tax</th>
+                        <th class="col-2">$200.00</th>
+                    </tr>
+                    <tr class="row">
+                        <th class="col-2">Total</th>
+                        <th class="col-2">$200.00</th>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+
+    <!-- ###################################################################### footer -->
+
+    <div class="row footer">
+        <div class="footer__col-1 text-left">
+            <h3>Download Our App</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="row">
+                <div class="col-2">
+                    <img  src="./images/play-store.png" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="./images/app-store.png"alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer__col-1 text-center" style="margin-top:40px">
+            <img src="./images/logo-white.png" alt="">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="footer__col-2 text-center">
+            <h3>Useful Links</h3>
+            <p>Coupons</p>
+            <p>Blogs Post</p>
+            <p>Return Policy</p>
+            <p>Coupons</p>
+            <p>Coupons</p>
+        </div>
+        <div class="footer__col-2 text-center">
+            <h3>Follow Us</h3>
+            <p>Coupons</p>
+            <p>Blogs Post</p>
+            <p>Return Policy</p>
+            <p>Coupons</p>
+            <p>Coupons</p>
+        </div>
+    </div>
+    <div class="sign text-center">
+        <p>Coppyright 2020 - Easy Tutorials</p>
+    </div>
+</body>
+
+<script>
+    // ################################# function close/open sidebar
+    function closeSidebar() {
+        document.getElementById('sidebar').style.width = "0";
+    }
+    function openSidebar() {
+        document.getElementById('sidebar').style.width = "400px";
+    }
+
+    // ################################# function close/open toggle
+    function clickTopNav(e) {
+        e.preventDefault();
+        const nav = document.querySelector('#topNav');
+        nav.classList.toggle('opened');
+    }
+
+    // ################################# function change form
+
+    function setParentImg(childId) {
+        var srcOfChildImg = document.getElementById(childId).getAttribute('src');
+        document.getElementById('parent-img').setAttribute('src', srcOfChildImg);
+    }
+</script>
+
+</html>

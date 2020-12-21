@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="./detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <!-- ###################################################################### navbar -->
+    <div class="navbar">
+        <div class="navbar-content">
+            <img class="navbar-content__logo" src="./images/logo.png" alt="">
+            <div class="spacer"></div>
+            <div class="toggleable" id="topNav">
+                <a id="topnav__a" href="./home.html">Home</a>
+                <a id="topnav__a" href="./home.html">Product</a>
+                <a id="topnav__a" href="./detail.html">Detail</a>
+                <a id="topnav__a" href="./cart.html">Cart</a>
+                <a id="topnav__a" href="./account.html">Account</a>
+            </div>
+            <img class="cart-item" src="./images/cart.png" alt="" onclick="openSidebar()">
+            <a href="#" class="navbar-content__toggler" onclick="clickTopNav(event)">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="sidebar" class="cart" style="width:0">
+            <div class="row-1 ">
+                <p>Your shopping cart</p>
+                <i class="fas fa-times-circle cart__button--close" onclick="closeSidebar()" style="margin: auto 0;"></i>
+            </div>
+            <div class="cart__product row">
+                <div  class="col-3">
+                    <img src="./images/buy-1.jpg" alt="">
+                </div>
+                <div class="cart__product__info">
+                    <h4 class="mz">Corgi HRL0907003 Water Tracker Bottle</h4>
+                    <p class="mz">$19.5</p>
+                    <p class="mz">32oz</p>
+                    <p class="mz" style="color: red;">Remove</p>
+                </div>
+            </div>
+            <div class="cart__product row">
+                <div  class="col-3">
+                    <img src="./images/buy-2.jpg" alt="">
+                </div>
+                <div class="cart__product__info">
+                    <h4 class="mz">Corgi HRL0907003 Water Tracker Bottle</h4>
+                    <p class="mz">$19.5</p>
+                    <p class="mz">32oz</p>
+                    <p class="mz" style="color: red;">Remove</p>
+                </div>
+            </div>
+            <div class="cart__product row">
+                <div  class="col-3">
+                    <img src="./images/buy-3.jpg" alt="">
+                </div>
+                <div class="cart__product__info">
+                    <h4 class="mz">Corgi HRL0907003 Water Tracker Bottle</h4>
+                    <p class="mz">$19.5</p>
+                    <p class="mz">32oz</p>
+                    <p class="mz" style="color: red;">Remove</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-product row">
+         <!-- ###################################################################### Picture left -->
+        <div class="detail-product__img col-2" >
+            <div class="row">
+                <img class=" col-1" id="parent-img" src="./images/gallery-1.jpg" alt="">
+            </div>
+            <div class="detail-product__img__child-img row">
+                <div class="col-4">
+                    <img src="./images/gallery-1.jpg" onclick="setParentImg(id)" id="img1" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="./images/gallery-2.jpg" onclick="setParentImg(id)" id="img2" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="./images/gallery-3.jpg" onclick="setParentImg(id)" id="img3" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="./images/gallery-4.jpg" onclick="setParentImg(id)" id="img4" alt="">
+                </div>
+            </div>
+        </div>
+
+         <!-- ###################################################################### Info left -->
+        <div class="detail-product__info col-2">
+            <p>T-shirt</p>
+            <h1>Red</h1>
+            <p>$50.00</p>
+            <select class="detail-product__info__select" name="" id="">
+                <option disabled="">Select Size</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+            </select>
+            <div class="" >
+                <input class="detail-product__info__input" type="number">
+                <a class="detail-product__info__btn">Add To Cart</a>
+            </div>
+            <h3>
+                Product Details
+                <i class="detail-product__info__rating fas fa-star" ></i>   
+            </h3>
+            <p>Gorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Lorem Ipsum has been the industry's a standard dummy text ever since the 1500s</p>
+        </div>  
+    </div>
+
+    <!-- ################################################# relatived Product -->
+    <div class="row" style="padding:0 100px;">
+        <h1 class="col-3">Related Products </h1>
+        <div style="margin: auto 0; font-size: 20px;" >View More</div>
+    </div>
+
+    <h3 class="catalog__feature text-center">Featured Products</h3>
+        <div class="second-catalog">
+            <div class="col-4">
+                <img  src="./images/product-1.jpg" alt="">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img  src="./images/product-2.jpg" alt="">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img  src="./images/product-3.jpg" alt="">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="rating--orange-color  fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img  src="./images/product-4.jpg" alt="">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="rating--orange-color fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+    
+    <div class="row footer">
+        <div class="footer__col-1">
+            <h3>Download Our App</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="row">
+                <div class="col-2">
+                    <img  src="./images/play-store.png" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="./images/app-store.png"alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer__col-1 text-center" style="margin-top:40px">
+            <img src="./images/logo-white.png" alt="">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="footer__col-2 text-center">
+            <h3>Useful Links</h3>
+            <p>Coupons</p>
+            <p>Blogs Post</p>
+            <p>Return Policy</p>
+            <p>Coupons</p>
+            <p>Coupons</p>
+        </div>
+        <div class="footer__col-2 text-center">
+            <h3>Follow Us</h3>
+            <p>Coupons</p>
+            <p>Blogs Post</p>
+            <p>Return Policy</p>
+            <p>Coupons</p>
+            <p>Coupons</p>
+        </div>
+    </div>
+    <div class="sign text-center">
+        <p>Coppyright 2020 - Easy Tutorials</p>
+    </div>
+</body>
+
+<script>
+    // ################################# function close/open sidebar
+    function closeSidebar() {
+        document.getElementById('sidebar').style.width = "0";
+    }
+    function openSidebar() {
+        document.getElementById('sidebar').style.width = "400px";
+    }
+
+    // ################################# function close/open toggle
+    function clickTopNav(e) {
+        e.preventDefault();
+        const nav = document.querySelector('#topNav');
+        nav.classList.toggle('opened');
+    }
+    
+</script>
+</html>
